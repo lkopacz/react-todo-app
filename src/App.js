@@ -10,18 +10,15 @@ class App extends Component {
       value: '',
       list: []
     }
-
-    this.grabValue = this.grabValue.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  grabValue(event) {
+  grabValue = (event) => {
     this.setState({
       value: event.target.value
     });
   }
 
-  handleSubmit(event) {
+  handleSubmit = (event) => {
     const list = [ event.target[0].value ]
     event.preventDefault();
     this.setState({
