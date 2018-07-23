@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 const Item = (props) => {
   const labelsArray = props.labels;
@@ -17,6 +18,10 @@ const Item = (props) => {
     </div>
   );
 }
+
+Item.PropTypes = {
+  labels: PropTypes.array,
+};
 
 Item.displayName = 'To Do Item';
 
