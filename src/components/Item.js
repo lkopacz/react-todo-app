@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import {finishedCheck} from './finished.js'
 
 const Item = (props) => {
   const labelsArray = props.labels;
   const labels = labelsArray.map((label, index) => {
     return(
-      <div>  
-        <input key={index} type="checkbox" />
-        <label>{label}</label>
+      <div>
+        <input key={index} type="checkbox" id={index}/>
+        <label className={finishedCheck(document.getElementById(index))}>{label}</label>
       </div>
     );
   });
